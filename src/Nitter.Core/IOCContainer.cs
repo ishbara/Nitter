@@ -18,15 +18,5 @@
         /// <param name="implementation">Type of the implementation of a service. (e.g. concrete class).</param>
         /// <param name="lifetime">Object lifetime of the binding.</param>
         void Bind(Type definition, Type implementation, Lifetime lifetime);
-
-        /// <summary>
-        /// Binds given instance to the service as singleton.
-        /// </summary>
-        /// <param name="instance">The instance to be registered.</param>
-        /// <typeparam name="TService">
-        /// Type of the service to be registered.
-        /// </typeparam>
-        void BindSingleton<TService>(TService instance)
-            where TService : class;
     }
 }
