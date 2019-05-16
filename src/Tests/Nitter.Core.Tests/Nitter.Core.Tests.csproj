@@ -6,6 +6,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\..\Analyzers.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\NoDocsAnalyzer.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup> 
   <ItemGroup>
     <PackageReference Include="SonarAnalyzer.CSharp" Version="7.14.0.8411">
