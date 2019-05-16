@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nitter.Core", "Nitter.Core\Nitter.Core.csproj", "{73028384-34CC-42CC-B5A6-8FC468F262B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nitter.Core", "Nitter.Core\Nitter.Core.csproj", "{73028384-34CC-42CC-B5A6-8FC468F262B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nitter.Core.Tests", "Tests\Nitter.Core.Tests\Nitter.Core.Tests.csproj", "{3DE02982-EE8C-4038-9C8A-CC3769CD1B3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A911DBDA-68D4-45CD-9E01-C177839C9758}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{73028384-34CC-42CC-B5A6-8FC468F262B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73028384-34CC-42CC-B5A6-8FC468F262B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73028384-34CC-42CC-B5A6-8FC468F262B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE02982-EE8C-4038-9C8A-CC3769CD1B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE02982-EE8C-4038-9C8A-CC3769CD1B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE02982-EE8C-4038-9C8A-CC3769CD1B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE02982-EE8C-4038-9C8A-CC3769CD1B3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DE02982-EE8C-4038-9C8A-CC3769CD1B3D} = {A911DBDA-68D4-45CD-9E01-C177839C9758}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19099A9C-7BAC-4CD5-A6A9-D5B9114BD65F}
