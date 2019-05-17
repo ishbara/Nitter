@@ -3,9 +3,9 @@
     using System;
     using System.Collections.Generic;
 
-    public class MockDI : IOCContainer
+    public class MockDIContainer : IOCContainer
     {
-        public MockDI()
+        public MockDIContainer()
         {
             this.Bindings = new Dictionary<Type, BindingDefinition>();
         }
