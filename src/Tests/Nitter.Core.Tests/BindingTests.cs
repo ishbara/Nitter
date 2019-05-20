@@ -1,5 +1,6 @@
 ﻿namespace Nitter.Core.Tests
 {
+    using Nitter.Core.Tests.BindingDummies;
     using Xunit;
 
     public class BindingTests
@@ -19,9 +20,9 @@
             var usedContainer = this.binder.Bind(typeof(BindingTests).Assembly);
 
             Assert.Same(this.container, usedContainer);
-            var definition = this.container.Bindings[typeof(IScopedDummy)];
-            Assert.Equal(typeof(ScopedDummy), definition.Implementation);
-            Assert.Equal(Lifetime.Scoped, definition.LifeTime);
+            var declaration = this.container.Bindings[typeof(IScopedDummy)];
+            Assert.Equal(typeof(ScopedDummy), declaration.Implementation);
+            Assert.Equal(Lifetime.Scoped, declaration.LifeTime);
         }
 
         [Fact]
@@ -34,27 +35,40 @@
                 .Bind(typeof(BindingTests).Assembly);
 
             Assert.Same(this.container, usedContainer);
-            var definition = this.container.Bindings[typeof(IDefaultDummy)];
-            Assert.Equal(typeof(DefaultDummy), definition.Implementation);
+            var declaration = this.container.Bindings[typeof(IDefaultDummy)];
+            Assert.Equal(typeof(DefaultDummy), declaration.Implementation);
             Assert.Equal(defaultLifetime, defaultLifetime);
         }
 
+        [Fact]
+        public void Binds_Internal_Implementation()
+        {
+            var usedContainer = this.binder
+                .Bind(typeof(BindingTests).Assembly);
+
+            Assert.Same(this.container, usedContainer);
+            var declaration = this.container.Bindings[typeof(IInternalDummy)];
+            Assert.Equal(typeof(InternalDummy), declaration.Implementation);
+        }
+
+        [Fact]
+        public void Binds_Inner_Types()
+        {
+            var usedContainer = this.binder
+                .Bind(typeof(BindingTests).Assembly);
+
+            Assert.Same(this.container, usedContainer);
+            var declaration = this.container.Bindings[typeof(IInnerDummy)];
+            Assert.Equal(typeof(InnerDummy), declaration.Implementation);
+        }
+
 #pragma warning disable SA1201 // Elements should appear in the correct order
-        public interface IScopedDummy
+        public interface IInnerDummy
         {
         }
 
-        [BindOn(typeof(IScopedDummy), Lifetime.Scoped)]
-        public class ScopedDummy : IScopedDummy
-        {
-        }
-
-        public interface IDefaultDummy
-        {
-        }
-
-        [BindOn(typeof(IDefaultDummy))]
-        public class DefaultDummy : IDefaultDummy
+        [BindOn(typeof(IInnerDummy))]
+        public class InnerDummy : IInnerDummy
         {
         }
 #pragma warning restore SA1201 // Elements should appear in the correct order

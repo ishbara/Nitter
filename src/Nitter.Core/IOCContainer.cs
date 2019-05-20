@@ -6,12 +6,12 @@
     public interface IOCContainer
     {
         /// <summary>
-        /// Binds the specified implementation to the definition with given lifetime.
+        /// Binds the specified implementation to the declaration with given lifetime.
         /// </summary>
-        /// <param name="definition">Type of the definition of a service. (e.g. interface).</param>
+        /// <param name="declaration">Type of the declaration of a service. (e.g. interface).</param>
         /// <param name="implementation">Type of the implementation of a service. (e.g. concrete class).</param>
         /// <param name="lifetime">Object lifetime of the binding.</param>
-        void Bind(Type definition, Type implementation, Lifetime lifetime);
+        void Bind(Type declaration, Type implementation, Lifetime lifetime);
 
         /// <summary> Gets an instance of T injected with all dependencies. </summary>
         /// <typeparam name="T">Type of the object that is requested.</typeparam>

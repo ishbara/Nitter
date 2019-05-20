@@ -5,7 +5,6 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <PropertyGroup>
-    <CodeAnalysisRuleSet>..\..\Analyzers.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSet>..\NoDocsAnalyzer.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup> 
   <ItemGroup>

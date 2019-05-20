@@ -5,16 +5,16 @@
     public class BindingDefinition
     {
         public BindingDefinition(
-            Type definition,
+            Type declaration,
             Type implementation,
             Lifetime lifeTime)
         {
-            this.Definition = definition;
+            this.Declaration = declaration;
             this.Implementation = implementation;
             this.LifeTime = lifeTime;
         }
 
-        public Type Definition { get; }
+        public Type Declaration { get; }
 
         public Type Implementation { get; }
 

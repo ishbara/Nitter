@@ -12,11 +12,11 @@
 
         public Dictionary<Type, BindingDefinition> Bindings { get; }
 
-        public void Bind(Type definition, Type implementation, Lifetime lifetime)
+        public void Bind(Type declaration, Type implementation, Lifetime lifetime)
         {
             this.Bindings.Add(
-                definition,
-                new BindingDefinition(definition, implementation, lifetime));
+                declaration,
+                new BindingDefinition(declaration, implementation, lifetime));
         }
 
         public T Resolve<T>()

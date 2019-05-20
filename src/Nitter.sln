@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nitter.Core", "Nitter.Core\Nitter.Core.csproj", "{73028384-34CC-42CC-B5A6-8FC468F262B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nitter.Core.Tests", "Tests\Nitter.Core.Tests\Nitter.Core.Tests.csproj", "{3DE02982-EE8C-4038-9C8A-CC3769CD1B3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nitter.Core.Tests", "Tests\Nitter.Core.Tests\Nitter.Core.Tests.csproj", "{3DE02982-EE8C-4038-9C8A-CC3769CD1B3D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A911DBDA-68D4-45CD-9E01-C177839C9758}"
 EndProject

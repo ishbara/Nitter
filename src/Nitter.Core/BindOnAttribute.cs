@@ -4,7 +4,7 @@
 
     /// <summary> Identifies the type which should be used for auto binding a certain interface. </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-    public class BindOnAttribute : Attribute
+    public sealed class BindOnAttribute : Attribute
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BindOnAttribute"/> class.
